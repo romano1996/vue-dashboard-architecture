@@ -1,5 +1,5 @@
 <template>
-  <div><h1>Hello, dashboard!</h1></div>
+  <div><h1>Such awesome component!</h1></div>
 </template>
 
 <script>
