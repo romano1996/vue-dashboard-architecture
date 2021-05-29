@@ -9,7 +9,7 @@ export const routes = [
         return import("./views/Dashboard");
       },
       two: function () {
-        return import("./views/PersonalInformation");
+        return import("./views/Personal/Show");
       },
       three: function () {
         return import("./views/Dashboard");
@@ -26,8 +26,9 @@ export const routes = [
             alert("Failed to collect user information..");
             from();
           });
+      } else {
+        next();
       }
-      next();
     },
   },
   {

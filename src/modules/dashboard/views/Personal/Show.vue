@@ -1,5 +1,5 @@
 <template>
-  <div v-if="information !== null">
+  <div >
     <div>
       <label for="firstname">Firstname</label> <br />
       <input
@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: "PersonalInformation",
+  name: "Show",
   computed: {
     information () {
       return this.$store.getters["user/get"];
