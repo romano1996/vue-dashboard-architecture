@@ -1,3 +1,5 @@
+import { store } from "@/store/global";
+
 export const routes = [
   {
     path: "/dashboard",
@@ -12,6 +14,15 @@ export const routes = [
       three: function () {
         return import("./views/Dashboard");
       },
+    },
+    beforeEnter: (to, from, next) => {
+      store.dispatch("user/fetch").then(() => {
+          next();
+        })
+        .catch(() => {
+          alert("Failed to collect user information..");
+          from();
+        });
     },
   },
   {

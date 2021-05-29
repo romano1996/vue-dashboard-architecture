@@ -40,20 +40,12 @@
 </template>
 
 <script>
-import { FetchPersonalInformation } from "@/modules/dashboard/services/personal_information_service";
-
 export default {
   name: "PersonalInformation",
-  data() {
-    return {
-      information: null,
-    };
-  },
-  created() {
-    FetchPersonalInformation().then((response) => {
-      // Iknow response.data.results[0] sucks. Just playing with architecture..
-      this.information = response.data.results[0];
-    });
+  computed: {
+    information () {
+      return this.$store.getters["user/get"];
+    },
   },
 };
 </script>

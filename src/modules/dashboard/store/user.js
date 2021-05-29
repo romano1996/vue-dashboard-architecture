@@ -1,16 +1,25 @@
-import { createStore } from "vuex";
+import { FetchPersonalInformation } from "@/modules/dashboard/services/personal_information_service";
 
-export default createStore({
+export const user = {
   namespaced: true,
-  state: {
-    user: null,
+  state: () => ({
+    user: [],
+  }),
+  mutations: {
+    setUser(state, data) {
+      state.user = data;
+    },
   },
-  mutations: {},
-  actions: {},
-  modules: {},
+  actions: {
+    fetch(context) {
+      return FetchPersonalInformation().then((response) => {
+        context.commit("setUser", response.data.results[0]);
+      });
+    },
+  },
   getters: {
-    get: (state) => () => {
+    get(state) {
       return state.user;
     },
   },
-});
+};
