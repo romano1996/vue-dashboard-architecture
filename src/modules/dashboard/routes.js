@@ -16,8 +16,7 @@ export const routes = [
       },
     },
     beforeEnter: (to, from, next) => {
-      const user = store.getters["user/get"];
-      if (!user) {
+      if (!store.getters["user/get"]) {
         store
           .dispatch("user/fetch")
           .then(() => {
