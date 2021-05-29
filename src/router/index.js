@@ -7,8 +7,6 @@ let routes = [];
 // Module routes
 routes = routes.concat(authenticationRoutes);
 
-console.log(routes);
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
