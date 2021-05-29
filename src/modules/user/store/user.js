@@ -1,4 +1,4 @@
-import { FetchPersonalInformation } from "../services/information";
+import { FetchPersonalInformation } from "../repositories/information";
 
 export const user = {
   namespaced: true,

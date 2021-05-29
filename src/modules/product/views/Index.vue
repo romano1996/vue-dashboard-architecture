@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { FetchProducts } from "../services/product";
+import { FetchProducts } from "../repositories/product";
 
 export default {
   name: "Index",
