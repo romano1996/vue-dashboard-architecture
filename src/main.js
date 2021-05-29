@@ -1,7 +1,14 @@
 import { createApp } from "vue";
 import application from "./application.vue";
 import router from "./router";
-import store from "./modules/authentication/store";
+import { createStore } from "vuex";
 import user from "@/modules/dashboard/store/user";
 
-createApp(application).use(user).use(store).use(router).mount("#app");
+// Register store modules.
+const store = createStore({
+  modules: {
+    user: user,
+  },
+});
+
+createApp(application).use(store).use(router).mount("#app");

@@ -21,7 +21,7 @@ export default {
     setInterval(() => {
       this.nummer++;
     }, 1000);
-  }
+  },
 };
 </script>
 
