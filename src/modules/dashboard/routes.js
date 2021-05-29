@@ -2,7 +2,7 @@ import { store } from "@/store/global";
 
 export const routes = [
   {
-    path: "/dashboard",
+    path: "",
     name: "dashboard",
     components: {
       one: function () {
@@ -31,7 +31,7 @@ export const routes = [
     },
   },
   {
-    path: "/dashboard/two",
+    path: "page/two",
     name: "dashboard-page-two",
     components: {
       one: function () {

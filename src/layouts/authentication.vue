@@ -1,4 +1,5 @@
 <template>
+  <p>Authentication layout loaded.</p>
   <router-view />
 </template>
 
