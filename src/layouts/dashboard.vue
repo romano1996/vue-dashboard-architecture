@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <Navigation
       :items="[
       {to: { name: 'dashboard' }, label: 'Dashboard' },
