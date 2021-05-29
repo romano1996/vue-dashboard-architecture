@@ -1,5 +1,8 @@
 <template>
   <div>
+    <h1>Personal information</h1>
+    <p>This information is collected & rendered by the Personal/Show view inside the dashboard module.</p>
+
     <div>
       <label for="firstname">Firstname</label> <br />
       <input

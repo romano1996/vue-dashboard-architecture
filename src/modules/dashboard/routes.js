@@ -6,10 +6,10 @@ export const routes = [
     name: "dashboard",
     components: {
       one: function () {
-        return import("./views/Dashboard");
+        return import("./views/Personal/Show");
       },
       two: function () {
-        return import("./views/Personal/Show");
+        return import("./views/Product/Index");
       },
       three: function () {
         return import("./views/Dashboard");
