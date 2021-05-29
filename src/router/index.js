@@ -7,14 +7,9 @@ let routes = [
   {
     path: "/",
     name: "authentication-layout",
+    children: authenticationRoutes,
     component: () => {
       return import("./../layouts/authentication");
-    },
-    children: authenticationRoutes,
-    beforeEnter: (to, from, next) => {
-      alert();
-
-      next();
     },
   },
   {
@@ -30,6 +25,12 @@ let routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+// Authentication check.
+router.beforeEach((to, from, next) => {
+  console.log("todo: implement authentication check. Move to other file..");
+  next();
 });
 
 export default router;

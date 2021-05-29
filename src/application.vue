@@ -1,5 +1,4 @@
 <template>
-  <!-- TODO: swap layout based on application state. -->
   <router-view />
 </template>
 
