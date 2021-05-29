@@ -1,13 +1,13 @@
 <template>
   <!-- TODO: swap layout based on application state. -->
-  <authentication />
+  <Dashboard />
 </template>
 
 <style></style>
 
 <script>
-import Authentication from "@/layouts/authentication";
+import Dashboard from "@/layouts/dashboard";
 export default {
-  components: { Authentication },
+  components: { Dashboard },
 };
 </script>

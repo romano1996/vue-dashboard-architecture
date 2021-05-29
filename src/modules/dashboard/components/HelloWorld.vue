@@ -1,10 +1,10 @@
 <template>
-  <router-view />
+  <div><h1>Hello, dashboard!</h1></div>
 </template>
 
 <script>
 export default {
-  name: "dashboard",
+  name: "HelloWorld",
 };
 </script>
 
