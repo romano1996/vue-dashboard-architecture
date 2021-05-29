@@ -1,4 +1,5 @@
 <template>
+  <!-- TODO: swap layout based on application state. -->
   <authentication />
 </template>
 
