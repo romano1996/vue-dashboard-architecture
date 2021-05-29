@@ -3,7 +3,7 @@ import { FetchPersonalInformation } from "@/modules/dashboard/services/personal_
 export const user = {
   namespaced: true,
   state: () => ({
-    user: [],
+    user: null,
   }),
   mutations: {
     setUser(state, data) {
@@ -18,7 +18,7 @@ export const user = {
     },
   },
   getters: {
-    get(state) {
+    get: (state) => {
       return state.user;
     },
   },

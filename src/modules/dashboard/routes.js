@@ -16,13 +16,19 @@ export const routes = [
       },
     },
     beforeEnter: (to, from, next) => {
-      store.dispatch("user/fetch").then(() => {
-          next();
-        })
-        .catch(() => {
-          alert("Failed to collect user information..");
-          from();
-        });
+      const user = store.getters["user/get"];
+      if (!user) {
+        store
+          .dispatch("user/fetch")
+          .then(() => {
+            next();
+          })
+          .catch(() => {
+            alert("Failed to collect user information..");
+            from();
+          });
+      }
+      next();
     },
   },
   {
