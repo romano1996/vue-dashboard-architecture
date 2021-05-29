@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <div>
       <label for="firstname">Firstname</label> <br />
       <input
