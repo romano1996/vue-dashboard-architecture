@@ -1,6 +1,6 @@
 import { store } from "@/store/global";
 
-export const routes = [
+export const dashboard = [
   {
     path: "",
     name: "dashboard",
