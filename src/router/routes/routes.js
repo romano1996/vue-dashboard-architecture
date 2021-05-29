@@ -6,14 +6,11 @@ export const routes = [
     name: "dashboard",
     components: {
       one: function () {
-        return import("./views/Personal/Show");
+        return import("../../modules/user/views/Show");
       },
       two: function () {
-        return import("./views/Product/Index");
-      },
-      three: function () {
-        return import("./views/Dashboard");
-      },
+        return import("../../modules/product/views/Index");
+      }
     },
     beforeEnter: (to, from, next) => {
       if (!store.getters["user/get"]) {
@@ -29,21 +26,6 @@ export const routes = [
       } else {
         next();
       }
-    },
-  },
-  {
-    path: "page/two",
-    name: "dashboard-page-two",
-    components: {
-      one: function () {
-        return import("./views/Dashboard");
-      },
-      two: function () {
-        return import("./views/Dashboard");
-      },
-      three: function () {
-        return import("./views/Dashboard");
-      },
     },
   },
 ];

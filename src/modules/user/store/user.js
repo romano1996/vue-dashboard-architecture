@@ -1,4 +1,4 @@
-import { FetchPersonalInformation } from "@/modules/dashboard/services/personal_information_service";
+import { FetchPersonalInformation } from "../services/information";
 
 export const user = {
   namespaced: true,

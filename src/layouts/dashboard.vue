@@ -1,11 +1,8 @@
 <template>
   <div>
-    <p>Dashboard layout loaded..</p>
-
     <Navigation
       :items="[
       {to: { name: 'dashboard' }, label: 'Dashboard' },
-      {to: { name: 'dashboard-page-two' }, label: 'Dashboard page two' },
     ]"
     />
 

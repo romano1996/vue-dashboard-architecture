@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { routes as authenticationRoutes } from "../modules/authentication/routes";
-import { routes as dashboardRoutes } from "../modules/dashboard/routes";
+import { routes as dashboardRoutes } from "./routes/routes";
 
 // Default routes
 let routes = [

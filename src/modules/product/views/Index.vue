@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { FetchProducts } from "@/modules/dashboard/services/product_service";
+import { FetchProducts } from "../services/product";
 
 export default {
   name: "Index",
