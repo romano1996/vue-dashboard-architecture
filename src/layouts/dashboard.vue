@@ -1,6 +1,10 @@
 <template>
-  <router-link :to="{ name: 'dashboard' }">Dashboard</router-link> <br>
-  <router-link :to="{ name: 'dashboard-page-two' }">Page Two</router-link>
+  <Navigation
+    :items="[
+      {to: { name: 'dashboard' }, label: 'Dashboard' },
+      {to: { name: 'dashboard-page-two' }, label: 'Dashboard page two' },
+    ]"
+  />
 
   <div>
     <router-view name="one"></router-view>
@@ -10,8 +14,10 @@
 </template>
 
 <script>
+import Navigation from "@/modules/navigation/views/Navigation";
 export default {
-  name: "dashboard"
+  name: "dashboard",
+  components: { Navigation }
 };
 </script>
 
