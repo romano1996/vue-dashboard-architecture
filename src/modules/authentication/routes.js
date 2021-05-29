@@ -6,4 +6,11 @@ export const routes = [
       return import("./views/Login");
     },
   },
+  {
+    path: "/register",
+    name: "register",
+    component: function () {
+      return import("./views/Register");
+    },
+  },
 ];

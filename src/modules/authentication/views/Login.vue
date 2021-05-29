@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Login view.</h1>
+    <router-link :to="{ name: 'register' }">
+      Click here to register.
+    </router-link>
   </div>
 </template>
 
