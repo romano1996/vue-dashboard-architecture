@@ -6,7 +6,7 @@ import { routes as dashboardRoutes } from "../modules/dashboard/routes";
 let routes = [
   {
     path: "/",
-    name: "authentication",
+    name: "authentication-layout",
     component: () => {
       return import("./../layouts/authentication");
     },
@@ -19,7 +19,7 @@ let routes = [
   },
   {
     path: "/dashboard",
-    name: "dashboard",
+    name: "dashboard-layout",
     children: dashboardRoutes,
     component: () => {
       return import("./../layouts/dashboard");
