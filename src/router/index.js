@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { routes as authenticationRoutes } from "../modules/authentication/routes";
 import { routes as dashboardRoutes } from "./routes/routes";
-
+import { routeRequiresAuthentication } from "@/router/validators";
 // Default routes
 let routes = [
   {
@@ -29,7 +29,10 @@ const router = createRouter({
 
 // Authentication check.
 router.beforeEach((to, from, next) => {
-  console.log("todo: implement authentication check. Move to other file..");
+  if (routeRequiresAuthentication(to.path)) {
+    alert("You should authenticate.");
+    from();
+  }
   next();
 });
 
