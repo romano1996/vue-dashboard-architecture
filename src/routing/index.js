@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { authentication as authenticationRoutes } from "./routes/authentication";
 import { dashboard as dashboardRoutes } from "./routes/dashboard";
-import { routeRequiresAuthentication } from "@/router/validators";
+import { routeRequiresAuthentication } from "@/routing/validators";
 // Default dashboard
 let routes = [
   {
