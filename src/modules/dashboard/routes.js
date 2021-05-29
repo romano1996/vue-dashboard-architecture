@@ -3,9 +3,6 @@ export const routes = [
     path: "/dashboard",
     name: "dashboard",
     components: {
-      default: function () {
-        return import("./views/Dashboard");
-      },
       one: function () {
         return import("./views/Dashboard");
       },
@@ -21,9 +18,6 @@ export const routes = [
     path: "/dashboard/two",
     name: "dashboard-page-two",
     components: {
-      default: function () {
-        return import("./views/Dashboard");
-      },
       one: function () {
         return import("./views/Dashboard");
       },
